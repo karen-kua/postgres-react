@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(bodyparser.json())
 
 app.listen(PORT, () => {
-console.log(`Server listening on port ${PORT}`)
+console.log(`Server listening on port ${PORT}...`)
 })
 
 module.exports = app
