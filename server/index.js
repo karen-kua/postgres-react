@@ -2,7 +2,7 @@ const path = require("path")
 const express = require("express")
 const bodyparser = require("body-parser")
 
-var db = require("./database")
+const db = require("./database")
 
 const ENV = process.env.NODE_ENV
 const PORT = process.env.PORT || 5000
@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(bodyparser.json())
 
+app.use("/api/cities", require("./api/cities"))
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`)
